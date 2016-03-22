@@ -1,3 +1,5 @@
+![这是预览图](https://github.com/heshiweij/CycleViewPager/blob/master/sample.png?raw=true)
+
 ## 使用方法
 
 ### 权限
