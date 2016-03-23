@@ -46,10 +46,8 @@ map.put("2", R.drawable.b);
 map.put("3", R.drawable.c);
 map.put("4", R.drawable.d);
 map.put("5", R.drawable.e);
-mCycleViewPager.setResIdMap(map);
-mCycleViewPager.setURLMap(map);
-mCycleViewPager.setDuration(1000);
-mCycleViewPager.start();
+
+mCycleViewPager.setResIdMap(map).setDuration(1000).start();
 
 ```
 
@@ -65,9 +63,7 @@ map.put("3", "http://www.2cto.com/meinv/uploads/131124/1-131124214135a6.jpg");
 map.put("4", "http://www.2cto.com/meinv/uploads/131124/1-1311242141135E.jpg");
 map.put("5", "http://www.2cto.com/meinv/uploads/131124/1-13112421404R17.jpg");
 
-mCycleViewPager.setURLMap(map);
-mCycleViewPager.setDuration(1000);
-mCycleViewPager.start();
+mCycleViewPager.setURLMap(map).setDuration(1000).start();
 ```
 
 **方法汇总**

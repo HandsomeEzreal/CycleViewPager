@@ -38,9 +38,7 @@ public class MainActivity extends Activity {
 		map.put("我是标题 3", "http://www.2cto.com/meinv/uploads/131124/1-131124214135a6.jpg");
 		map.put("我是标题 4", "http://www.2cto.com/meinv/uploads/131124/1-1311242141135E.jpg");
 		map.put("我是标题 5", "http://www.2cto.com/meinv/uploads/131124/1-13112421404R17.jpg");
-		mCycleViewPager.setURLMap(map);
-		mCycleViewPager.setDuration(1000);
-		mCycleViewPager.start();
+		mCycleViewPager.setURLMap(map).setDuration(1000).start();
 		
 //		setBottomBackgroundColor 设置底部背景颜色
 //		setIndicatorRadius 设置指示器的圆角值

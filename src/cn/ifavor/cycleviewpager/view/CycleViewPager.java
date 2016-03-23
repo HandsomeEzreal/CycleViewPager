@@ -406,8 +406,9 @@ public class CycleViewPager extends RelativeLayout {
 	}
 
 	/** 设置"标题 - URL"对应 map */
-	public void setURLMap(LinkedHashMap<String, String> mURLMap) {
+	public CycleViewPager setURLMap(LinkedHashMap<String, String> mURLMap) {
 		this.mURLMap = mURLMap;
+		return this;
 	}
 
 	/** 获取"标题 -资源 id"对应 map */
@@ -416,8 +417,9 @@ public class CycleViewPager extends RelativeLayout {
 	}
 
 	/** 设置"标题 -资源 id"对应 map */
-	public void setResIdMap(LinkedHashMap<String, Integer> mResIdMap) {
+	public CycleViewPager setResIdMap(LinkedHashMap<String, Integer> mResIdMap) {
 		this.mResIdMap = mResIdMap;
+		return this;
 	}
 
 	public enum IndicatorDirection {
@@ -525,95 +527,107 @@ public class CycleViewPager extends RelativeLayout {
 	 * 设置底部背景颜色
 	 * @param bottomBackgroundColor
 	 */
-	public void setBottomBackgroundColor(int bottomBackgroundColor) {
+	public CycleViewPager setBottomBackgroundColor(int bottomBackgroundColor) {
 		this.mBottomBackgroundColor = bottomBackgroundColor;
+		return this;
 	}
 
 	/**
 	 * 设置指示器的圆角值
 	 * @param indicatorRadius
 	 */
-	public void setIndicatorRadius(int indicatorRadius) {
+	public CycleViewPager setIndicatorRadius(int indicatorRadius) {
 		this.mIndicatorRadius = indicatorRadius;
+		return this;
 	}
 
 	/**
 	 * 设置指示器未选中的颜色
 	 * @param unSelectedColor
 	 */
-	public void setUnSelectedColor(int unSelectedColor) {
+	public CycleViewPager setUnSelectedColor(int unSelectedColor) {
 		this.mUnSelectedColor = unSelectedColor;
+		return this;
 	}
 
 	/**
 	 * 设置指示器选中的颜色
 	 * @param selectedColor
 	 */
-	public void setSelectedColor(int selectedColor) {
+	public CycleViewPager setSelectedColor(int selectedColor) {
 		this.mSelectedColor = selectedColor;
+		return this;
 	}
 
 	/**
 	 * 设置轮播器执行时间间隔
 	 * @param duration
 	 */
-	public void setDuration(int duration) {
+	public CycleViewPager setDuration(int duration) {
 		this.mDuration = duration;
+		return this;
 	}
 
 	/**
 	 * 设置指示器显示位置
 	 * @param indicatorDirection
 	 */
-	public void setIndicatorDirection(IndicatorDirection indicatorDirection) {
+	public CycleViewPager setIndicatorDirection(IndicatorDirection indicatorDirection) {
 		this.mIndicatorDirection = indicatorDirection;
+		return this;
 	}
 
 	/**
 	 * 设置指示器点的尺寸
 	 * @param indicatorPointSize
 	 */
-	public void setIndicatorPointSize(int indicatorPointSize) {
+	public CycleViewPager setIndicatorPointSize(int indicatorPointSize) {
 		this.mIndicatorPointSize = indicatorPointSize;
+		return this;
 	}
 
 	/**
 	 * 设置指示器间隔距离
 	 * @param indicatorPointMargin
 	 */
-	public void setIndicatorPointMargin(int indicatorPointMargin) {
+	public CycleViewPager setIndicatorPointMargin(int indicatorPointMargin) {
 		this.mIndicatorPointMargin = indicatorPointMargin;
+		return this;
 	}
 
 	/**
 	 * 设置是否显示标题
 	 * @param isShowTitle
 	 */
-	public void setShowTitle(boolean isShowTitle) {
+	public CycleViewPager setShowTitle(boolean isShowTitle) {
 		this.isShowTitle = isShowTitle;
+		return this;
 	}
 
 	/**
 	 * 设置标题字体大小
 	 * @param titleTextSize
 	 */
-	public void setTitleTextSize(float titleTextSize) {
+	public CycleViewPager setTitleTextSize(float titleTextSize) {
 		this.mTitleTextSize = titleTextSize;
+		return this;
 	}
 
 	/**
 	 * 设置标题字体颜色
 	 * @param titleTextColor
 	 */
-	public void setTitleTextColor(int titleTextColor) {
+	public CycleViewPager setTitleTextColor(int titleTextColor) {
 		this.mTitleTextColor = titleTextColor;
+		return this;
 	}
 	
 	public Handler getHandler() {
 		return mHandler;
 	}
 
-	public void setHandler(Handler handler) {
+	public CycleViewPager setHandler(Handler handler) {
 		this.mHandler = handler;
+		return this;
 	}
 }
