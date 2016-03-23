@@ -6,11 +6,6 @@
     <cn.ifavor.cycleviewpager.view.CycleViewPager
         android:id="@+id/cvp_main"
         android:layout_width="match_parent"
-        android:layout_height="100dip" />
-    
-    <ImageView 
-        android:id="@+id/imageview"
-        android:layout_width="300dip"
-        android:layout_height="300dip"/>
+        android:layout_height="150dip" />
     
 </RelativeLayout>

@@ -4,13 +4,14 @@ import java.util.LinkedHashMap;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import cn.ifavor.cycleviewpager.view.CycleViewPager;
 import cn.ifavor.cycleviewpager.view.CycleViewPager.IndicatorDirection;
 
 
 public class MainActivity extends Activity {
 
-    private CycleViewPager cycleViewPager;
+    private CycleViewPager mCycleViewPager;;
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +21,7 @@ public class MainActivity extends Activity {
     }
 
 	private void init() {
-		cycleViewPager = (CycleViewPager) findViewById(R.id.cvp_main);
-		
+		mCycleViewPager = (CycleViewPager) findViewById(R.id.cvp_main);
 		
 //		Map<String, Integer> map = new TreeMap<String, Integer>();
 //		LinkedHashMap<String, Integer> map = new LinkedHashMap<String, Integer>();
@@ -30,30 +30,38 @@ public class MainActivity extends Activity {
 //		map.put("3", R.drawable.c);
 //		map.put("4", R.drawable.d);
 //		map.put("5", R.drawable.e);
-//		cycleViewPager.setResIdMap(map);
+//		mCycleViewPager.setResIdMap(map);
 		
 		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-		map.put("1", "http://gtb.baidu.com/HttpService/get?p=dHlwZT1pbWFnZS9qcGVnJm49dmlzJnQ9YWRpbWcmYz10YjppZyZyPTgzOTUxNzY0Miw0NzM0Njk0NTkAMQA&gp=0.jpg");
-		map.put("2", "http://img3.imgtn.bdimg.com/it/u=2320326258,4071616861&fm=11&gp=0.jpg");
-		map.put("3", "http://img2.imgtn.bdimg.com/it/u=143502629,680691207&fm=11&gp=0.jpg");
-		map.put("4", "http://img0.imgtn.bdimg.com/it/u=4002501043,3685512765&fm=11&gp=0.jpg");
-		map.put("5", "http://img1.imgtn.bdimg.com/it/u=2294736753,1257721804&fm=15&gp=0.jpg");
+		map.put("我是标题 1", "http://www.2cto.com/meinv/uploads/131124/1-1311242143022C.jpg");
+		map.put("我是标题 2", "http://www.2cto.com/meinv/uploads/131124/1-131124214242c7.jpg");
+		map.put("我是标题 3", "http://www.2cto.com/meinv/uploads/131124/1-131124214135a6.jpg");
+		map.put("我是标题 4", "http://www.2cto.com/meinv/uploads/131124/1-1311242141135E.jpg");
+		map.put("我是标题 5", "http://www.2cto.com/meinv/uploads/131124/1-13112421404R17.jpg");
+		mCycleViewPager.setURLMap(map);
+		mCycleViewPager.setDuration(1000);
+		mCycleViewPager.start();
 		
-		cycleViewPager.setURLMap(map);
-		// 设置轮播时间间隔
-		cycleViewPager.setDuration(3000);
-		cycleViewPager.setIndicatorDirection(IndicatorDirection.RIGHT);
-		cycleViewPager.setIndicatorPointSize(12);
-		cycleViewPager.setShowTitle(false);
-		// 开启自动轮播
-		cycleViewPager.start();
+//		setBottomBackgroundColor 设置底部背景颜色
+//		setIndicatorRadius 设置指示器的圆角值
+//		setUnSelectedColor 设置指示器未选中的颜色
+//		setSelectedColor 设置指示器选中的颜色
+//		setDuration 设置轮播器执行时间间隔
+//		setIndicatorDirection 设置指示器显示位置
+//		setIndicatorPointSize 设置指示器点的尺寸
+//		setIndicatorPointMargin 设置指示器间隔距离
+//		setShowTitle 设置是否显示标题
+//		setTitleTextSize 设置标题字体大小
+//		setTitleTextColor 设置标题字体颜色
+//		setHandler 设置 handler
 	}
 	
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		if (cycleViewPager != null){
-			cycleViewPager.cancel();
+		if (mCycleViewPager != null){
+			// 取消轮播定时器
+			mCycleViewPager.cancel();
 		}
 	}
 }
