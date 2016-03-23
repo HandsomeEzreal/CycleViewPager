@@ -86,7 +86,7 @@ mCycleViewPager.start();
 |setShowTitle  | 设置是否显示标题  |true  |
 |setTitleTextSize  | 设置标题字体大小  |12(px)  |
 |setTitleTextColor  | 设置标题字体颜色  |Color.rgb(255,0,0)  |
-|setHandler  | 设置 handler  |null  |
+|setHandler  | 设置 handler  |建议传入全局唯一 handler,否则新建  |
 
 **注意**
 
