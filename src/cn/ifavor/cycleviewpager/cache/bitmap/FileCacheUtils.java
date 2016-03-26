@@ -68,7 +68,7 @@ public class FileCacheUtils {
 		FileOutputStream fos;
 		try {
 			fos = new FileOutputStream(cacheBitmapFile);
-			bitmap.compress(CompressFormat.JPEG, 100, fos);
+			bitmap.compress(CompressFormat.WEBP, 100, fos);
 			
 			// 保存在内存中
 			memCacheUtils.put(url, bitmap);
