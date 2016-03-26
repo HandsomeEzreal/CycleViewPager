@@ -89,9 +89,7 @@ mCycleViewPager.setURLMap(map).setDuration(1000).start();
 1. 建议使用全局 handler，如：
    setHandler(BaseApplication.getHanlder())
 
-2. 建议图片大于 3 张，否则会划出白屏（此问题修复中...）
-
-3. 建议在 onDestory 取消轮播，如：
+2. 建议在 onDestory 取消轮播，如：
 
 ```java
 	@Override
